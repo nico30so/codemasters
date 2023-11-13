@@ -30,3 +30,34 @@ Scénario Alternatif :
 Scénario d'Erreur :
 
     Si le système de paiement en ligne rencontre un problème technique, l'application affiche un message d'erreur et conseille au membre de réessayer ultérieurement ou de contacter le support technique.
+
+
+Scénario : Mise à Jour de l’Index des Œuvres avec la Passation des Œuvres dans le Domaine Public par le Bibliothécaire
+
+Description : Un bibliothécaire met à jour l'index des œuvres après la passation d'une œuvre dans le domaine public, rendant ainsi l'œuvre accessible gratuitement à tous les membres.
+
+Acteurs : Bibliothécaire, Système.
+
+Préconditions :
+
+    Une œuvre sous droits a été examinée et déterminée comme passant dans le domaine public.
+    Le bibliothécaire est connecté à l'application.
+
+Étapes :
+
+    Le bibliothécaire accède à la section "À Modérer" de l'application où les œuvres en attente de statut sont répertoriées.
+    Il sélectionne l'œuvre qui a été déterminée comme passant dans le domaine public.
+    Le bibliothécaire met à jour le statut de l'œuvre en le changeant pour "Domaine Public".
+    L'application déplace automatiquement l'œuvre dans le répertoire "fond_commun", rendant ainsi l'œuvre accessible gratuitement à tous les membres.
+    L'application met à jour l'index des œuvres avec les nouvelles informations, reflétant le changement de statut.
+    Si des exemplaires de l'œuvre étaient déjà empruntés, l'application maintient les emprunts actuels jusqu'à leur terme, mais les nouveaux membres peuvent désormais emprunter l'œuvre gratuitement.
+    Le bibliothécaire peut ajouter des commentaires ou des annotations pour référence future.
+    L'application notifie tous les membres de la bibliothèque de la disponibilité gratuite de l'œuvre nouvellement placée dans le domaine public.
+
+Scénario Alternatif :
+
+    Si le bibliothécaire rencontre des difficultés techniques pendant le processus, l'application génère un message d'erreur, enregistre la situation, et informe le support technique pour résolution.
+
+Scénario d'Erreur :
+
+    Si une erreur survient pendant la mise à jour de l'index, l'application génère un message d'erreur et propose des options de correction. Si l'erreur est critique, l'opération est annulée, et le bibliothécaire est informé de l'incident.
