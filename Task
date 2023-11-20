@@ -279,5 +279,60 @@ Un débat sur la classification d'une œuvre entre les bibliothécaires retarde 
 Une œuvre soumise n'a pas de violation directe des droits d'auteur mais suscite des inquiétudes concernant la conformité avec les règles de contenu de la bibliothèque. Les bibliothécaires ne parviennent pas à un consensus clair sur le rejet, nécessitant une analyse plus approfondie du contenu. Cela peut potentiellement entraîner des retards dans la décision finale.
 
 ---
+###Consulter une œuvre du domaine public:
 
+**Description:** L'utilisateur souhaite consulter une œuvre du domaine public.
+**Acteurs:** Utilisateur, Serveur de BiblioConnect.
+**Prérequis:** L'utilisateur est membre et l'application est installée.
+**Étapes:**
+1. Le membre lance l'application.
+2. Le membre choisit de consulter les œuvres du domaine public.
+3. L'application affiche la liste des œuvres du domaine public.
+4. L'utilisateur sélectionne une œuvre spécifique pour la consulter.
+5. L'application récupère les informations et le fichier de l'œuvre du serveur.
+6. L'utilisateur peut consulter l'œuvre, afficher les détails et naviguer à travers le contenu.
+
+**Scénario alternatif (étape 4)**:
+L'utilisateur utilise une fonction de recherche pour trouver une œuvre spécifique.
+
+**Scénarios erreurs**: 
+données, documents, écrans non spécifiés
+
+---
+
+###Passage d’une œuvre dans le domaine public:
+
+**Description:** Lorsqu'une œuvre sous droits devient libre de droits, elle passe dans le domaine public.
+**Acteurs:** Bibliothécaire, Serveur de BiblioConnect.
+**Prérequis**: L'application est installée, et un bibliothécaire est connecté.
+**Étapes:**
+1. Le bibliothécaire ouvre l'application et accède à la rubrique de modération des œuvres.
+2. Une œuvre est soumise à modération, et le bibliothécaire vérifie les informations.
+3. Le bibliothécaire décide que l'œuvre est maintenant dans le domaine public.
+4. L'application met à jour la rubrique "fond_commun" en ajoutant l'œuvre libre de droits.
+5. L'œuvre devient accessible gratuitement pour tous les membres.
+
+---
+
+###Mise à jour de l’index des œuvres:
+
+**Description:** L'index des œuvres est mis à jour suite à l'ajout ou la suppression d'une œuvre.
+**Acteurs:** Bibliothécaire, Serveur de l'association.
+**Prérequis:** L'application est installée, et un bibliothécaire est connecté.
+**Étapes:**
+1. Un bibliothécaire modifie le statut d'une œuvre (par exemple, la passage dans le domaine public).
+2. L'application met à jour l'index en ajoutant ou supprimant l'œuvre selon la modification effectuée.
+3. Les modifications sont propagées aux serveurs pour assurer la cohérence de l'index.
+
+---
+
+###Consultation des rubriques:
+
+**Description:** L'utilisateur souhaite consulter les différentes rubriques de la bibliothèque.
+**Acteurs:** Utilisateur, Serveur de l'association.
+**Prérequis:** L'application est installée, et l'utilisateur est membre.
+**Étapes:**
+1. L'utilisateur lance l'application.
+2. L'application affiche les différentes rubriques (fond_commun, emprunts, séquestre, à modérer) en fonction des droits de l'utilisateur.
+3. L'utilisateur peut accéder à chaque rubrique pour consulter les œuvres correspondantes.
 
