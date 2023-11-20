@@ -1,0 +1,283 @@
+Fil de L'eau : 
+- Lecture du document 
+- Prise de note et résumé de celui ci
+- Conception de ce résumé via differents outils : ChatGPT
+"""
+    L'association CultureDiffusion a pour projet de créer une bibliothèque numérique décentralisée. Les membres peuvent numériser des œuvres et les emprunter selon deux modalités : gratuit pour les œuvres du domaine public et location pour les œuvres sous droits. Les membres peuvent également proposer des œuvres. Chaque œuvre est composée de fichiers d'œuvre et de métadonnées. L'application gère quatre répertoires, dont un pour les œuvres libres de droits et un pour les œuvres sous droits en attente de modération.
+
+    L'application est organisée en quatre répertoires :
+
+    1. "fond_commun" : contient des œuvres libres de droits de l'association.
+    2. "emprunts" : stocke les œuvres sous droits empruntées par les membres, chiffrées avec leur clé personnelle.
+    3. "séquestre" : gère une partie des œuvres sous droits de l'association, avec tous les fichiers chiffrés, et l'index n'est pas accessible directement.
+    4. "à modérer" : contient les œuvres proposées par les membres en attente de modération.
+       
+    Les bibliothécaires modèrent les œuvres proposées, complètent les informations, et décident de leur statut (domaine public, protégée, rejetée). Les droits d'accès sont gérés en conséquence. À la fin de la période d'emprunt, les œuvres sont automatiquement supprimées. Les œuvres sont classées en types (articles, livres, musique, vidéos) avec plusieurs catégories possibles. Certaines œuvres peuvent appartenir à plusieurs catégories à la fois.
+"""
+- Lecture du texte généré et ajout d'améliorations/modifications
+- Ecriture d'un phrase qui pourrait résumer le projet en 1 ligne
+- Création d'un glossaire (Définition et explication des mots clés du sujet)
+- On a ensuite établi la liste avec les mots importants et qui peuvent porter à confusion dans le texte (utilisation de ChatGPT pour la génération des définitions et explications des mots)
+"""
+Mots clés :
+    - **Bibliothèque numérique** : Une collection d'œuvres sous forme numérique, généralement accessibles via un ordinateur ou un appareil électronique.
+    - **Gestion décentralisée** : La répartition des responsabilités et des opérations sur plusieurs emplacements ou entités au lieu d'un seul centre de contrôle.
+    - **Œuvres** : Contenu créatif tel que des livres, de la musique, des vidéos, etc.
+    - **Domaine public** : Œuvres dont les droits d'auteur ont expiré ou ont été volontairement partagées sans restriction.
+    - **Emprunt** : L'action de prendre temporairement une œuvre en vue de sa lecture ou de son utilisation.
+    - **Membre** : Une personne ou une entité qui fait partie d'une organisation ou d'un groupe.
+    - **Fichier** : Un ensemble de données numériques stockées sous un nom spécifique.
+    - **Format JSON** : Un format de données texte couramment utilisé pour structurer et échanger des informations.
+    - **Index** : Une liste organisée d'éléments pour faciliter la recherche ou la récupération.
+    - **Répertoires** : Des dossiers ou des emplacements de stockage pour organiser des fichiers.
+    - **Fond commun** : Une collection d'œuvres librement partagées par une organisation ou une communauté.
+    - **Séquestre** : La mise en quarantaine ou la restriction de l'accès à certaines œuvres.
+    - **Modération** : Le processus d'examen et d'approbation de contenus soumis, notamment pour garantir leur conformité aux règles ou aux normes.
+    - **Statut** : L'état ou la condition actuelle d'une œuvre, notamment si elle est dans le domaine public, protégée, ou rejetée.
+    - **Protection** : Les mesures prises pour prévenir l'accès ou l'utilisation non autorisés d'une œuvre.
+    - **Copie** : Une reproduction d'une œuvre.
+    - **Licence d'exploitation** : Un accord légal définissant les droits d'utilisation d'une œuvre.
+    - **Clé** : Une série de caractères utilisée pour chiffrer ou déchiffrer des données.
+    - **Validité** : La période pendant laquelle une œuvre ou un emprunt est en vigueur ou autorisé.
+    - **Classification** : Le tri ou la catégorisation des œuvres en fonction de leurs caractéristiques.
+    - **Catégories** : Des groupes ou des classifications pour regrouper des œuvres similaires.
+
+Mots compliqués :
+    - **Modalités** : Les conditions ou les règles spécifiques régissant un accord ou une opération.
+    - **Chiffrées** : Les données transformées en un format illisible sans la clé de déchiffrement correspondante.
+    - **Système de rubriques** : Une structure organisée pour classer ou organiser des informations.
+    - **Séquestre** : La mise en quarantaine ou la restriction de l'accès à certaines œuvres.
+"""
+- réduction de la phrase pour le readme
+- suivi du cours sur les scénarios 
+- création des scénarios 
+- voici les scénarios non détaillé obtenus : 
+  - Voici 11 scénarios pour votre système de bibliothèque numérique avec des actions variées :
+
+        **1. Ajout d'une œuvre au répertoire "à modérer" :**
+        **Description :** Un membre propose une nouvelle œuvre.
+        **Acteurs :** Membre, bibliothécaires.
+        **Précondition :** Connexion à l'application.
+        **Étapes :** Le membre télécharge l'œuvre et les informations au format JSON, les soumet à la bibliothèque via l'application, où les bibliothécaires les examinent pour validation.
+
+        **2. Validation d'une œuvre par les bibliothécaires :**
+        **Description :** Les bibliothécaires examinent et valident les propositions d'œuvres.
+        **Acteurs :** Bibliothécaires.
+        **Précondition :** Proposition d'une œuvre par un membre.
+        **Étapes :** Les bibliothécaires vérifient les données, complètent les informations manquantes, et décident du statut de l'œuvre (domaine public ou sous droits).
+
+        **3. Emprunt d'une œuvre dans le répertoire "emprunts" :**
+        **Description :** Un membre emprunte une œuvre sous droits.
+        **Acteurs :** Membre.
+        **Précondition :** Œuvre disponible pour emprunt.
+        **Étapes :** Le membre sélectionne l'œuvre, la télécharge en utilisant sa clé privée pour déchiffrer, et peut accéder à l'œuvre pendant la période d'emprunt.
+
+        **4. Gestion des droits d'accès pour une œuvre sous droits :**
+        **Description :** L'application gère les accès aux œuvres sous droits.
+        **Acteurs :** Système de la bibliothèque.
+        **Précondition :** Statut défini pour une œuvre sous droits.
+        **Étapes :** L'application chiffre l'œuvre avec une clé et limite le nombre de copies selon les licences d'exploitation.
+
+        **5. Suppression d'une œuvre après la fin d'emprunt :**
+        **Description :** L'œuvre empruntée est automatiquement retirée du répertoire d'un membre.
+        **Acteurs :** Système de la bibliothèque.
+        **Précondition :** Fin de la période d'emprunt.
+        **Étapes :** L'application supprime l'accès à l'œuvre dans le répertoire du membre.
+
+        **6. Classification d'une œuvre dans plusieurs catégories :**
+        **Description :** Attribution de catégories à une œuvre.
+        **Acteurs :** Bibliothécaires.
+        **Précondition :** Validation de l'œuvre.
+        **Étapes :** Les bibliothécaires classent l'œuvre dans les catégories pertinentes, en prenant en compte ses caractéristiques multiples.
+
+        **7. Mise à jour de l'index des œuvres :**
+        **Description :** Actualisation de l'index de la bibliothèque.
+        **Acteurs :** Système de la bibliothèque.
+        **Précondition :** Ajout ou suppression d'une œuvre.
+        **Étapes :** L'application met à jour son index pour refléter les changements dans la bibliothèque.
+
+        **8. Accès à une œuvre du domaine public :**
+        **Description :** Accès à une œuvre du domaine public.
+        **Acteurs :** Membre.
+        **Précondition :** Œuvre du domaine public.
+        **Étapes :** Le membre peut télécharger l'œuvre gratuitement, sans restriction de copie.
+
+        **9. Gestion des copies pour une œuvre sous droits :**
+        **Description :** Contrôle du nombre de copies pour une œuvre protégée.
+        **Acteurs :** Système de la bibliothèque.
+        **Précondition :** Œuvre sous droits.
+        **Étapes :** L'application gère le nombre de copies autorisées en fonction des licences d'exploitation.
+
+        **10. Élargissement de la bibliothèque par un nouveau membre :**
+        **Description :** Un nouvel utilisateur rejoint la bibliothèque.
+        **Acteurs :** Nouveau membre.
+        **Précondition :** Création d'un compte dans l'application.
+        **Étapes :** Le nouveau membre crée un compte et a accès aux fonctionnalités de la bibliothèque.
+
+        **11. Rejet d'une œuvre après modération :**
+        **Description :** L'œuvre proposée est rejetée par les bibliothécaires.
+        **Acteurs :** Bibliothécaires.
+        **Précondition :** Proposition d'une œuvre.
+        **Étapes :** Après vérification, si l'œuvre ne correspond pas aux critères ou aux droits requis, elle est rejetée et supprimée du répertoire "à modérer".
+
+et voici la version détaillée : 
+
+---
+### Ajout d'une œuvre au répertoire "à modérer" : Proposition d'une nouvelle œuvre
+
+**Description :** Un utilisateur anonyme propose une nouvelle œuvre pour intégration dans la bibliothèque numérique BiblioConnect.
+
+**Acteurs :** Utilisateur Anonyme, Bibliothécaires actifs
+
+**Précondition :** Connexion à l'application de la bibliothèque numérique.
+
+**Étapes détaillées :**
+
+1. **Connexion à BiblioConnect :** Un utilisateur anonyme accède à l'application de la bibliothèque numérique, BiblioConnect.
+
+2. **Proposition de l'œuvre :** L'utilisateur repère l'option permettant de soumettre une nouvelle œuvre pour ajout à BiblioConnect.
+
+3. **Téléchargement de l'œuvre :** L'utilisateur sélectionne le fichier numérique de l'œuvre depuis son dispositif pour l'ajouter à la bibliothèque.
+
+4. **Saisie des informations :** Il complète un formulaire avec les détails pertinents de l'œuvre, tels que l'auteur, édition, date de publication, éditeur, et catégorie.
+
+5. **Soumission des données et du fichier :** Une fois les détails complétés, il envoie les informations et le fichier correspondant à BiblioConnect.
+
+6. **Stockage dans le répertoire "à modérer" :** Ces informations sont stockées dans le répertoire "à modérer" de BiblioConnect, en attente d'examen et de validation par les bibliothécaires.
+
+7. **Examen par les bibliothécaires :** Les bibliothécaires examinent les détails et le fichier soumis pour valider l'intégration de cette nouvelle œuvre dans BiblioConnect.
+
+**Scenario alternatif :**
+
+Après la soumission de l'œuvre, la bibliothèque détecte des incohérences dans les informations fournies et envoie une notification à l'utilisateur anonyme demandant des détails supplémentaires. L'utilisateur fournit les informations manquantes, mais ces dernières ne suffisent pas pour garantir l'authenticité de l'œuvre. Les bibliothécaires décident de rejeter temporairement la proposition en attendant des informations plus complètes.
+
+---
+### Validation d'une œuvre par les bibliothécaires
+
+**Description :** Les bibliothécaires examinent et valident les propositions d'œuvres pour leur intégration dans la bibliothèque numérique.
+
+**Acteurs :** Bibliothécaires.
+
+**Précondition :** Proposition d'une œuvre par un membre.
+
+**Étapes détaillées :**
+
+1. **Réception des propositions :** Après qu'un membre a soumis une proposition d'œuvre pour l'intégrer dans la bibliothèque, celle-ci est transmise au groupe de bibliothécaires actifs.
+
+2. **Examen des données :** Les bibliothécaires vérifient méticuleusement les informations fournies avec l'œuvre, y compris les détails de l'auteur, l'édition, la date de publication, l'éditeur, et d'autres données pertinentes. 
+
+3. **Complétion des informations manquantes :** Si certaines informations sont incomplètes ou manquantes, les bibliothécaires peuvent rechercher et ajouter les détails manquants pour assurer la clarté et la complétude des informations relatives à l'œuvre.
+
+4. **Évaluation du statut de l'œuvre :** Après avoir examiné et complété les informations, les bibliothécaires décident du statut de l'œuvre. Ils déterminent si l'œuvre appartient au domaine public ou si elle est soumise à des droits d'auteur et nécessite des restrictions d'accès.
+
+5. **Validation de l'œuvre :** Une fois que les données sont complètes et que le statut est évalué, les bibliothécaires valident l'œuvre pour son intégration dans la bibliothèque numérique.
+
+**Scenario alternatif :**
+
+Suite à la vérification des données, les bibliothécaires découvrent des informations contradictoires concernant les droits d'auteur. Ils contactent l'auteur de l'œuvre pour confirmer ces détails et ne reçoivent aucune réponse dans le délai imparti. Ceci conduit à une suspension temporaire de la proposition d'œuvre, en attendant la clarification des droits d'auteur.
+
+---
+---
+### Classification d'une œuvre dans plusieurs catégories
+
+**Description :** Les bibliothécaires attribuent des catégories à une œuvre pour une classification plus précise.
+
+**Acteurs :** Bibliothécaires.
+
+**Précondition :** Validation de l'œuvre.
+
+**Étapes :**
+
+1. **Validation de l'œuvre :** Une fois qu'une œuvre est validée pour inclusion dans la bibliothèque, les bibliothécaires commencent le processus de classification.
+
+2. **Analyse des caractéristiques :** Les bibliothécaires examinent les caractéristiques de l'œuvre telles que son sujet, son genre, son style, son époque, et tout autre élément pertinent.
+
+3. **Identification des catégories :** En se basant sur ces caractéristiques, ils déterminent les catégories les plus appropriées pour l'œuvre.
+
+4. **Attribution des catégories :** L'œuvre est classée dans plusieurs catégories selon sa nature plurielle, et chaque catégorie est attribuée en conséquence.
+
+5. **Saisie des données :** Les bibliothécaires enregistrent les catégories assignées à l'œuvre dans la base de données de la bibliothèque, assurant une indexation précise.
+
+**Scenario alternatif :**
+
+Un débat sur la classification d'une œuvre entre les bibliothécaires retarde la publication de l'œuvre, entraînant des retards dans la mise à disposition. Certains catégorisent l'œuvre dans une catégorie, tandis que d'autres suggèrent une autre, provoquant un délai supplémentaire pour la décision finale. 
+
+---
+### Rejet d'une œuvre après modération
+
+**Description :** L'œuvre proposée ne répond pas aux critères ou aux droits requis, et est rejetée par les bibliothécaires.
+
+**Acteurs :** Bibliothécaires.
+
+**Précondition :** Proposition d'une œuvre pour intégration dans la bibliothèque.
+
+**Étapes :**
+
+1. **Examen de l'œuvre :** Les bibliothécaires passent en revue les détails et le contenu de l'œuvre soumise dans le répertoire "à modérer".
+
+2. **Vérification des critères :** Ils vérifient si l'œuvre correspond aux critères de la bibliothèque, tels que la légalité, la qualité, la pertinence par rapport aux directives établies.
+
+3. **Analyse des droits :** Les bibliothécaires s'assurent que l'œuvre respecte les droits d'auteur et tout autre droit applicable.
+
+4. **Décision de rejet :** Si l'œuvre ne répond pas aux critères requis ou ne respecte pas les droits, les bibliothécaires décident de son rejet.
+
+5. **Suppression de l'œuvre :** L'œuvre rejetée est retirée du répertoire "à modérer" et n'est pas intégrée à la bibliothèque numérique.
+
+**Scenario alternatif :**
+
+Une œuvre soumise n'a pas de violation directe des droits d'auteur mais suscite des inquiétudes concernant la conformité avec les règles de contenu de la bibliothèque. Les bibliothécaires ne parviennent pas à un consensus clair sur le rejet, nécessitant une analyse plus approfondie du contenu. Cela peut potentiellement entraîner des retards dans la décision finale.
+
+---
+---
+### Classification d'une œuvre dans plusieurs catégories
+
+**Description :** Les bibliothécaires attribuent des catégories à une œuvre pour une classification plus précise.
+
+**Acteurs :** Bibliothécaires.
+
+**Précondition :** Validation de l'œuvre.
+
+**Étapes :**
+
+1. **Validation de l'œuvre :** Une fois qu'une œuvre est validée pour inclusion dans la bibliothèque, les bibliothécaires commencent le processus de classification.
+
+2. **Analyse des caractéristiques :** Les bibliothécaires examinent les caractéristiques de l'œuvre telles que son sujet, son genre, son style, son époque, et tout autre élément pertinent.
+
+3. **Identification des catégories :** En se basant sur ces caractéristiques, ils déterminent les catégories les plus appropriées pour l'œuvre.
+
+4. **Attribution des catégories :** L'œuvre est classée dans plusieurs catégories selon sa nature plurielle, et chaque catégorie est attribuée en conséquence.
+
+5. **Saisie des données :** Les bibliothécaires enregistrent les catégories assignées à l'œuvre dans la base de données de la bibliothèque, assurant une indexation précise.
+
+**Scenario alternatif :**
+
+Un débat sur la classification d'une œuvre entre les bibliothécaires retarde la publication de l'œuvre, entraînant des retards dans la mise à disposition. Certains catégorisent l'œuvre dans une catégorie, tandis que d'autres suggèrent une autre, provoquant un délai supplémentaire pour la décision finale. 
+
+---
+### Rejet d'une œuvre après modération
+
+**Description :** L'œuvre proposée ne répond pas aux critères ou aux droits requis, et est rejetée par les bibliothécaires.
+
+**Acteurs :** Bibliothécaires.
+
+**Précondition :** Proposition d'une œuvre pour intégration dans la bibliothèque.
+
+**Étapes :**
+
+1. **Examen de l'œuvre :** Les bibliothécaires passent en revue les détails et le contenu de l'œuvre soumise dans le répertoire "à modérer".
+
+2. **Vérification des critères :** Ils vérifient si l'œuvre correspond aux critères de la bibliothèque, tels que la légalité, la qualité, la pertinence par rapport aux directives établies.
+
+3. **Analyse des droits :** Les bibliothécaires s'assurent que l'œuvre respecte les droits d'auteur et tout autre droit applicable.
+
+4. **Décision de rejet :** Si l'œuvre ne répond pas aux critères requis ou ne respecte pas les droits, les bibliothécaires décident de son rejet.
+
+5. **Suppression de l'œuvre :** L'œuvre rejetée est retirée du répertoire "à modérer" et n'est pas intégrée à la bibliothèque numérique.
+
+**Scenario alternatif :**
+
+Une œuvre soumise n'a pas de violation directe des droits d'auteur mais suscite des inquiétudes concernant la conformité avec les règles de contenu de la bibliothèque. Les bibliothécaires ne parviennent pas à un consensus clair sur le rejet, nécessitant une analyse plus approfondie du contenu. Cela peut potentiellement entraîner des retards dans la décision finale.
+
+---
+
+
