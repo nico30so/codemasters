@@ -381,4 +381,6 @@ Le membre signale une œuvre, mais les bibliothécaires estiment que le contenu 
 
 Le système de signalement rencontre un problème technique, et les signalements ne parviennent pas aux bibliothécaires. Dans ce cas, les bibliothécaires peuvent ne pas être informés du signalement, retardant ainsi le processus de modération. Un message d'erreur est généré, et le support technique est informé pour résoudre le problème.
 
+-Modification des scénarios et implémentation de ceux ci, correction, et suppresion des doubles.
+-Ajout des scénarios développé en externe au fichier de base et création des dossiers.
 - Après la mise en place des scénarios et la publication de ceux ci sur github, nous commencons le développement des differents diagramme Scénario par scénario et les publiers directement dans les dossiers correspondant.
