@@ -349,3 +349,36 @@ Scénario d'Erreur :
     Si une erreur survient pendant la mise à jour de l'index, l'application génère un message d'erreur et propose des options de correction. Si l'erreur est critique, l'opération est annulée, et le bibliothécaire est informé de l'incident.
 
 ---S11 
+### Scénario : Signalement d'une œuvre litigieuse par un membre
+
+**Description :** Un membre de la bibliothèque signale une œuvre qu'il considère comme litigieuse en raison de son contenu inapproprié.
+
+**Acteurs :** Membre, Bibliothécaires, Responsable de la modération.
+
+**Préconditions :** Le membre est connecté à l'application.
+
+**Étapes détaillées :**
+
+1. **Identification de l'œuvre :** Le membre identifie une œuvre dans le répertoire "fond_commun" qu'il estime litigieuse en raison de son contenu.
+
+2. **Options de signalement :** L'application propose une option de signalement pour chaque œuvre. Le membre sélectionne l'œuvre en question et utilise l'option de signalement.
+
+3. **Motif du signalement :** Le membre fournit un motif détaillé expliquant pourquoi il considère l'œuvre comme litigieuse. Il peut également attacher des captures d'écran ou d'autres preuves, le cas échéant.
+
+4. **Notification aux bibliothécaires :** Le système envoie une notification aux bibliothécaires signalant le signalement et incluant les informations fournies par le membre.
+
+5. **Examen par les bibliothécaires :** Les bibliothécaires examinent rapidement l'œuvre signalée et les motifs fournis par le membre.
+
+6. **Décision de modération :** Les bibliothécaires prennent une décision concernant l'œuvre signalée. Ils peuvent choisir de la retirer temporairement, de demander des informations supplémentaires, ou de la maintenir en l'état.
+
+7. **Communication avec le membre :** En fonction de la décision, les bibliothécaires informent le membre du résultat de la modération. S'ils demandent des informations supplémentaires, le membre est invité à fournir davantage de détails.
+
+**Scenario alternatif :**
+
+Le membre signale une œuvre, mais les bibliothécaires estiment que le contenu ne viole pas les directives de la bibliothèque. Dans ce cas, ils informent le membre de leur décision et expliquent pourquoi l'œuvre reste disponible dans la bibliothèque.
+
+**Scénario d'Erreur :**
+
+Le système de signalement rencontre un problème technique, et les signalements ne parviennent pas aux bibliothécaires. Dans ce cas, les bibliothécaires peuvent ne pas être informés du signalement, retardant ainsi le processus de modération. Un message d'erreur est généré, et le support technique est informé pour résoudre le problème.
+
+- Après la mise en place des scénarios et la publication de ceux ci sur github, nous commencons le développement des differents diagramme Scénario par scénario et les publiers directement dans les dossiers correspondant.
