@@ -384,7 +384,7 @@ Le système de signalement rencontre un problème technique, et les signalements
 -Modification des scénarios et implémentation de ceux ci, correction, et suppresion des doubles.
 -Ajout des scénarios développé en externe au fichier de base et création des dossiers.
 - Après la mise en place des scénarios et la publication de ceux ci sur github, nous commencons le développement des differents diagramme Scénario par scénario et les publiers directement dans les dossiers correspondant.
--Répartiton des taches pour la création des diagrammes (Activités / classe) :
+-Répartiton des taches pour la création des diagrammes (Séquence / classe) :
     S1 : fait 
     S2 : non (Ariel)
     S3 : non (Ariel)
