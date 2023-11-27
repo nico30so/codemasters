@@ -122,7 +122,7 @@ Mots compliqués :
 
 et voici la version détaillée : 
 
----
+--- S1 
 ### Ajout d'une œuvre au répertoire "à modérer" : Proposition d'une nouvelle œuvre
 
 **Description :** Un utilisateur anonyme propose une nouvelle œuvre pour intégration dans la bibliothèque numérique BiblioConnect.
@@ -151,7 +151,7 @@ et voici la version détaillée :
 
 Après la soumission de l'œuvre, la bibliothèque détecte des incohérences dans les informations fournies et envoie une notification à l'utilisateur anonyme demandant des détails supplémentaires. L'utilisateur fournit les informations manquantes, mais ces dernières ne suffisent pas pour garantir l'authenticité de l'œuvre. Les bibliothécaires décident de rejeter temporairement la proposition en attendant des informations plus complètes.
 
----
+--- S2
 ### Validation d'une œuvre par les bibliothécaires
 
 **Description :** Les bibliothécaires examinent et valident les propositions d'œuvres pour leur intégration dans la bibliothèque numérique.
@@ -176,8 +176,7 @@ Après la soumission de l'œuvre, la bibliothèque détecte des incohérences da
 
 Suite à la vérification des données, les bibliothécaires découvrent des informations contradictoires concernant les droits d'auteur. Ils contactent l'auteur de l'œuvre pour confirmer ces détails et ne reçoivent aucune réponse dans le délai imparti. Ceci conduit à une suspension temporaire de la proposition d'œuvre, en attendant la clarification des droits d'auteur.
 
----
----
+--- S3
 ### Classification d'une œuvre dans plusieurs catégories
 
 **Description :** Les bibliothécaires attribuent des catégories à une œuvre pour une classification plus précise.
@@ -202,7 +201,7 @@ Suite à la vérification des données, les bibliothécaires découvrent des inf
 
 Un débat sur la classification d'une œuvre entre les bibliothécaires retarde la publication de l'œuvre, entraînant des retards dans la mise à disposition. Certains catégorisent l'œuvre dans une catégorie, tandis que d'autres suggèrent une autre, provoquant un délai supplémentaire pour la décision finale. 
 
----
+--- S4
 ### Rejet d'une œuvre après modération
 
 **Description :** L'œuvre proposée ne répond pas aux critères ou aux droits requis, et est rejetée par les bibliothécaires.
@@ -227,8 +226,7 @@ Un débat sur la classification d'une œuvre entre les bibliothécaires retarde 
 
 Une œuvre soumise n'a pas de violation directe des droits d'auteur mais suscite des inquiétudes concernant la conformité avec les règles de contenu de la bibliothèque. Les bibliothécaires ne parviennent pas à un consensus clair sur le rejet, nécessitant une analyse plus approfondie du contenu. Cela peut potentiellement entraîner des retards dans la décision finale.
 
----
----
+---S5
 ### Classification d'une œuvre dans plusieurs catégories
 
 **Description :** Les bibliothécaires attribuent des catégories à une œuvre pour une classification plus précise.
@@ -253,32 +251,8 @@ Une œuvre soumise n'a pas de violation directe des droits d'auteur mais suscite
 
 Un débat sur la classification d'une œuvre entre les bibliothécaires retarde la publication de l'œuvre, entraînant des retards dans la mise à disposition. Certains catégorisent l'œuvre dans une catégorie, tandis que d'autres suggèrent une autre, provoquant un délai supplémentaire pour la décision finale. 
 
----
-### Rejet d'une œuvre après modération
 
-**Description :** L'œuvre proposée ne répond pas aux critères ou aux droits requis, et est rejetée par les bibliothécaires.
-
-**Acteurs :** Bibliothécaires.
-
-**Précondition :** Proposition d'une œuvre pour intégration dans la bibliothèque.
-
-**Étapes :**
-
-1. **Examen de l'œuvre :** Les bibliothécaires passent en revue les détails et le contenu de l'œuvre soumise dans le répertoire "à modérer".
-
-2. **Vérification des critères :** Ils vérifient si l'œuvre correspond aux critères de la bibliothèque, tels que la légalité, la qualité, la pertinence par rapport aux directives établies.
-
-3. **Analyse des droits :** Les bibliothécaires s'assurent que l'œuvre respecte les droits d'auteur et tout autre droit applicable.
-
-4. **Décision de rejet :** Si l'œuvre ne répond pas aux critères requis ou ne respecte pas les droits, les bibliothécaires décident de son rejet.
-
-5. **Suppression de l'œuvre :** L'œuvre rejetée est retirée du répertoire "à modérer" et n'est pas intégrée à la bibliothèque numérique.
-
-**Scenario alternatif :**
-
-Une œuvre soumise n'a pas de violation directe des droits d'auteur mais suscite des inquiétudes concernant la conformité avec les règles de contenu de la bibliothèque. Les bibliothécaires ne parviennent pas à un consensus clair sur le rejet, nécessitant une analyse plus approfondie du contenu. Cela peut potentiellement entraîner des retards dans la décision finale.
-
----
+---S6
 ###Consulter une œuvre du domaine public:
 
 **Description:** L'utilisateur souhaite consulter une œuvre du domaine public.
@@ -298,7 +272,7 @@ L'utilisateur utilise une fonction de recherche pour trouver une œuvre spécifi
 **Scénarios erreurs**: 
 données, documents, écrans non spécifiés
 
----
+---S7
 
 ###Passage d’une œuvre dans le domaine public:
 
@@ -312,7 +286,7 @@ données, documents, écrans non spécifiés
 4. L'application met à jour la rubrique "fond_commun" en ajoutant l'œuvre libre de droits.
 5. L'œuvre devient accessible gratuitement pour tous les membres.
 
----
+---S8
 
 ###Mise à jour de l’index des œuvres:
 
@@ -324,7 +298,7 @@ données, documents, écrans non spécifiés
 2. L'application met à jour l'index en ajoutant ou supprimant l'œuvre selon la modification effectuée.
 3. Les modifications sont propagées aux serveurs pour assurer la cohérence de l'index.
 
----
+---S9
 
 ###Consultation des rubriques:
 
