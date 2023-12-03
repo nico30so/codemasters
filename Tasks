@@ -3,13 +3,13 @@ Fil de L'eau :
 - Prise de note et résumé de celui ci
 - Conception de ce résumé via differents outils : ChatGPT
 """
-    L'association CultureDiffusion a pour projet de créer une bibliothèque numérique décentralisée. Les membres peuvent numériser des œuvres et les emprunter selon deux modalités : gratuit pour les œuvres du domaine public et location pour les œuvres sous droits. Les membres peuvent également proposer des œuvres. Chaque œuvre est composée de fichiers d'œuvre et de métadonnées. L'application gère quatre répertoires, dont un pour les œuvres libres de droits et un pour les œuvres sous droits en attente de modération.
+    L'application CultureDiffusion a pour projet de créer une bibliothèque numérique décentralisée. Les membres peuvent numériser des œuvres et les emprunter selon deux modalités : gratuit pour les œuvres du domaine public et location pour les œuvres sous droits. Les membres peuvent également proposer des œuvres. Chaque œuvre est composée de fichiers d'œuvre et de métadonnées. L'application gère quatre répertoires, dont un pour les œuvres libres de droits et un pour les œuvres sous droits en attente de modération.
 
     L'application est organisée en quatre répertoires :
 
-    1. "fond_commun" : contient des œuvres libres de droits de l'association.
+    1. "fond_commun" : contient des œuvres libres de droits de l'application.
     2. "emprunts" : stocke les œuvres sous droits empruntées par les membres, chiffrées avec leur clé personnelle.
-    3. "séquestre" : gère une partie des œuvres sous droits de l'association, avec tous les fichiers chiffrés, et l'index n'est pas accessible directement.
+    3. "séquestre" : gère une partie des œuvres sous droits de l'application, avec tous les fichiers chiffrés, et l'index n'est pas accessible directement.
     4. "à modérer" : contient les œuvres proposées par les membres en attente de modération.
        
     Les bibliothécaires modèrent les œuvres proposées, complètent les informations, et décident de leur statut (domaine public, protégée, rejetée). Les droits d'accès sont gérés en conséquence. À la fin de la période d'emprunt, les œuvres sont automatiquement supprimées. Les œuvres sont classées en types (articles, livres, musique, vidéos) avec plusieurs catégories possibles. Certaines œuvres peuvent appartenir à plusieurs catégories à la fois.
@@ -276,7 +276,7 @@ données, documents, écrans non spécifiés
 ###Consultation des rubriques:
 
 **Description:** L'utilisateur souhaite consulter les différentes rubriques de la bibliothèque.
-**Acteurs:** Utilisateur, Serveur de l'association.
+**Acteurs:** Utilisateur, Serveur de l'application.
 **Prérequis:** L'application est installée, et l'utilisateur est membre.
 **Étapes:**
 1. L'utilisateur lance l'application.
