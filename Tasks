@@ -265,7 +265,7 @@ données, documents, écrans non spécifiés
 ###Mise à jour de l’index des œuvres:
 
 **Description:** L'index des œuvres est mis à jour suite à l'ajout ou la suppression d'une œuvre.
-**Acteurs:** Bibliothécaire, Serveur de l'association.
+**Acteurs:** Bibliothécaire, Serveur de l'application.
 **Prérequis:** L'application est installée, et un bibliothécaire est connecté.
 **Étapes:**
 1. Un bibliothécaire modifie le statut d'une œuvre (par exemple, la passage dans le domaine public).
