@@ -1,0 +1,54 @@
+sequenceDiagram
+    participant Membre
+    participant Application
+    participant SystemePaiement
+    participant Bibliothequaires
+
+    Note over Membre: Exploration du repertoire "emprunts"
+    Membre->>Application: Explorer "emprunts"
+
+    Note over Membre: Choix d'une œuvre et location
+    Membre->>Application: Choisir œuvre et louer
+
+    Note over Application: Affichage des details de la transaction
+    Application->>Application: Afficher details de la transaction
+
+    Note over Membre: Confirmation de la location et choix de paiement
+    Membre->>Application: Confirmer location et choisir paiement
+
+    Note over Application: Transmission des details au systeme de paiement
+    Application->>SystemePaiement: Transmettre details transaction
+
+    Note over SystemePaiement: Verification et traitement du paiement
+    SystemePaiement->>SystemePaiement: Verifier et traiter paiement
+
+    alt Paiement reussi
+        Note over Application: Chiffrement et enregistrement
+        Application->>Application: Chiffrer œuvre, enregistrer location
+
+        Note over Application: Transfert dans le repertoire "emprunts" du membre
+        Application->>Application: Transferer œuvre dans "emprunts" du membre
+
+        Note over Membre: Acceder, dechiffrer et consulter l'œuvre
+        Membre->>Application: Acceder, dechiffrer, consulter
+
+        loop Periode de location (2 semaines)
+            Note over Application: Notification de rappel
+            Application->>Membre: Notification de rappel
+        end
+
+        Note over Membre: Retour de l'œuvre
+        Membre->>Application: Retourner l'œuvre
+
+        Note over Application: Suppression automatique du repertoire "emprunts"
+        Application->>Application: Supprimer œuvre de "emprunts"
+
+    else Paiement echoue
+        Note over Application: Affichage de l'echec et invitation a mettre a jour les informations de paiement
+        Application->>Membre: Afficher echec, inviter a mettre a jour les informations de paiement
+    end
+
+    alt Probleme technique de paiement
+        Note over Application: Affichage message d'erreur
+        Application->>Membre: Afficher message d'erreur, conseiller de reessayer ou contacter le support technique
+    end
