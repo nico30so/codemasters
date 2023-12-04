@@ -1,0 +1,39 @@
+
+sequenceDiagram
+    participant Utilisateur
+    participant Application
+    participant Serveur
+
+    Note over Utilisateur, Application: Lancement de l'application
+    Utilisateur->>Application: Ouvrir BiblioConnect
+
+    Note over Application, Serveur: Récupération des informations
+    Application->>Serveur: Demande des rubriques
+    Serveur-->>Application: Envoie des informations des rubriques
+
+    Note over Application: Affichage des rubriques
+    Application->>Application: Afficher les rubriques
+
+    Note over Utilisateur: Accès aux rubriques
+    Utilisateur->>Application: Visualiser les rubriques
+
+    loop Vérification des droits d'accès
+        Note over Application: Vérification des droits
+        Application->>Serveur: Demande des droits d'accès
+        Serveur-->>Application: Envoie des droits et affiche la rubrique
+    end
+
+    Note over Utilisateur: Navigation entre les rubriques
+    Utilisateur->>Application: Sélectionner une rubrique
+    Application->>Serveur: Demande des œuvres de la rubrique sélectionnée
+    Serveur-->>Application: Envoie des œuvres de la rubrique
+
+    Note over Application: Affichage des œuvres de la rubrique
+    Application->>Application: Afficher les œuvres
+
+    Note over Application: Scénario d'erreur
+    alt Problème technique
+        Application->>Utilisateur: Afficher message d'erreur
+    else Autre erreur
+        Application->>Utilisateur: Afficher message d'erreur et suggestions
+    end
