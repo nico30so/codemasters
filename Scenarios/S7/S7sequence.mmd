@@ -1,0 +1,21 @@
+sequenceDiagram
+    participant Bibliothequaire
+    participant Application
+    participant ServeurAssociation
+
+    Note over Bibliothequaire: Modification du statut de l'œuvre
+    Bibliothequaire->>Application: Accéder à la gestion des œuvres\nModifier statut de l'œuvre
+
+    Note over Application: Mise à jour de l'index
+    Application->>Application: Mettre à jour l'index des œuvres\nIntégrer ou retirer l'œuvre en fonction du statut
+
+    Note over Application: Propagation des modifications
+    Application->>ServeurAssociation: Propager les modifications de l'index
+
+    alt Modification réussie
+        ServeurAssociation-->>Application: Confirmation de la mise à jour
+        Note over Bibliothequaire: Informer le bibliothécaire de la mise à jour réussie
+    else Erreur technique
+        ServeurAssociation-->>Application: Notification d'erreur
+        Note over Bibliothequaire: Afficher un message d'erreur au bibliothécaire\nNotifier le support technique
+    end
