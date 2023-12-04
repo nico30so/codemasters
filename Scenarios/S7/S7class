@@ -1,0 +1,26 @@
+classDiagram
+  class Bibliothequaire {
+    +modifierStatut(oeuvre: Oeuvre): void
+    +recevoirNotificationErreur(message: string): void
+  }
+
+  class Application {
+    -mettreAJourIndex(oeuvre: Oeuvre, statut: string): void
+    -propagerModifications(): void
+  }
+
+  class ServeurAssociation {
+    -recevoirModifications(oeuvre: Oeuvre, statut: string): void
+    +notifierErreurTechnique(message: string): void
+  }
+
+  class Oeuvre {
+    -titre: string
+    -auteur: string
+    -statut: string
+  }
+
+  Bibliothequaire --|> Application
+  Bibliothequaire --|> ServeurAssociation
+  Application --|> Oeuvre
+  ServeurAssociation --|> Oeuvre
