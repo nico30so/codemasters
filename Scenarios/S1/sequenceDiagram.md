@@ -1,3 +1,4 @@
+```mermaid
 graph TD
   A[UtilisateurAnonyme] -->|Connexion()| B[BiblioConnect]
   A -->|ProposerOeuvre()| B
@@ -9,3 +10,4 @@ graph TD
   D -->|ExaminerDetails()| B
   B -->|ValiderIntegration()| B
   B -->|NotificationRejet| A
+```
