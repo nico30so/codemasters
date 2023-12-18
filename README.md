@@ -20,7 +20,8 @@ L'application se distingue par les fonctionnalités suivantes :
 
 5. **Classification et Catégorisation :** Les œuvres sont classées en types (articles, livres, musique, vidéos) et peuvent appartenir à plusieurs catégories à la fois.
 
-## Glossaire
+## Glossaire [Lien vers un fichier](Codemasters/Glossaire.md)
+
 
 Pour mieux comprendre le projet, voici un glossaire des termes clés utilisés :
 
