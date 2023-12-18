@@ -1,0 +1,30 @@
+classDiagram
+    class Bibliothecaire {
+        +AccederAModerer()
+        +SelectionnerOeuvre()
+        +MettreAJourStatut()
+        +AjouterCommentaires()
+    }
+
+    class Application {
+        +DeplacerOeuvre()
+        +MettreAJourIndex()
+        +NotifierDisponibilite()
+        +MaintenirEmpruntsActuels()
+        +GenererMessageErreur()
+        +ProposerOptionsCorrection()
+        +InformerIncident()
+        +AnnulerOperation()
+    }
+
+    class Systeme {
+        +MettreAJourInformations()
+    }
+
+    class Membres {
+        +RecevoirNotification()
+    }
+
+    Bibliothecaire --|> Application : Utilise
+    Application --|> Systeme : Utilise
+    Application --|> Membres : Utilise
