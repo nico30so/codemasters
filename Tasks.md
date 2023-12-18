@@ -1,5 +1,25 @@
 # Fil de L'eau
 
+# Table des Matières
+
+- [Lecture du document](#lecture-du-document)
+- [Lecture du texte généré et ajout d'améliorations/modifications](#lecture-du-texte-généré-et-ajout-daméliorationsmodifications)
+- [Phrase résumant le projet en 1 ligne](#phrase-résumant-le-projet-en-1-ligne)
+- [Glossaire](#glossaire)
+- [Mots compliqués](#mots-compliqués)
+- [Réduction de la phrase pour le readme](#réduction-de-la-phrase-pour-le-readme)
+- [Suivi du cours sur les scénarios](#suivi-du-cours-sur-les-scénarios)
+- [Création des scénarios](#création-des-scénarios)
+- [Scénarios non détaillés](#scénarios-non-détaillés)
+- [Version détaillée](#version-détaillée)
+- [Modification des scénarios et implémentation de ceux-ci, correction, et suppression des doublons.](#modification-des-scénarios-et-implémentation-de-ceux-ci-correction-et-suppression-des-doublons)
+- [Ajout des scénarios développés en externe au fichier de base et création des dossiers.](#ajout-des-scénarios-développés-en-externe-au-fichier-de-base-et-création-des-dossiers)
+- [Après la mise en place des scénarios et la publication de ceux-ci sur GitHub, nous commençons le développement des différents diagrammes scénario par scénario et les publions directement dans les dossiers correspondants.](#après-la-mise-en-place-des-scénarios-et-la-publication-de-ceux-ci-sur-github-nous-commençons-le-développement-des-différents-diagrammes-scénario-par-scénario-et-les-publions-directement-dans-les-dossiers-correspondants)
+- [Répartition des tâches pour la création des diagrammes (Séquence / Classe) (Répartition en part égale des diagrammes) :](#répartition-des-tâches-pour-la-création-des-diagrammes-séquence--classe-répartition-en-part-égale-des-diagrammes-)
+- [Importation des fichiers dans les dossiers sur le GitHub](#importation-des-fichiers-dans-les-dossiers-sur-le-github)
+- [Préparation de l'oral et choix du scénario à présenter](#préparation-de-loral-et-choix-du-scénario-à-présenter)
+
+
 ## Lecture du document
 - L'application CultureDiffusion a pour projet de créer une bibliothèque numérique décentralisée. Les membres peuvent numériser des œuvres et les emprunter selon deux modalités : gratuit pour les œuvres du domaine public et location pour les œuvres sous droits. Les membres peuvent également proposer des œuvres. Chaque œuvre est composée de fichiers d'œuvre et de métadonnées. L'application gère quatre répertoires, dont un pour les œuvres libres de droits et un pour les œuvres sous droits en attente de modération.
 - L'application est organisée en quatre répertoires :
