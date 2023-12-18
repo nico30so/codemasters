@@ -1,0 +1,99 @@
+classDiagram
+  class Utilisateur {
+    +ouvrirApplication(): void
+    +visualiserRubriques(): void
+    +selectionnerRubrique(): void
+    +afficherMessageErreur(message: string): void
+  }
+
+  class Membre {
+    +explorerEmprunts(): void
+    +choisirEtLouer(oeuvre: Oeuvre): void
+    +confirmerLocation(paiement: Paiement): void
+    +accederEtDechiffrer(oeuvreEmpruntee: OeuvreEmpruntee): void
+    +retournerOeuvre(oeuvreEmpruntee: OeuvreEmpruntee): void
+    +recevoirNotification():string
+
+  }
+
+  class ApplicationEmprunt {
+    +afficherDetailsTransaction(oeuvre: Oeuvre): void
+    +transmettreDetailsTransaction(paiement: Paiement): void
+    +chiffrerEtEnregistrer(oeuvre: Oeuvre, paiement: Paiement): OeuvreEmpruntee
+    +envoyerNotificationRappel(oeuvreEmpruntee: OeuvreEmpruntee): void
+    +supprimerEmprunt(oeuvreEmpruntee: OeuvreEmpruntee): void
+    +afficherMessageErreur(message: string): void
+  }
+
+
+
+  class ApplicationConsultation {
+    +demanderRubriques(): void
+    +afficherRubriques(): void
+    +verifierDroitsAcces(): void
+    +demanderOeuvresRubrique(): void
+    +afficherOeuvresRubrique(): void
+    +afficherMessageErreur(message: string): void
+  }
+
+  class Bibliothecaire {
+    +accederAModerer()
+    +selectionnerOeuvre()
+    +mettreAJourStatut()
+    +ajouterCommentaires()
+  }
+
+  class ApplicationGestion {
+    +deplacerOeuvre()
+    +mettreAJourIndex()
+    +notifierDisponibilite()
+    +maintenirEmpruntsActuels()
+    +genererMessageErreur()
+    +proposerOptionsCorrection()
+    +informerIncident()
+    +annulerOperation()
+  }
+
+  class Serveur {
+    +envoyerInformationsRubriques(): void
+    +envoyerDroitsAcces(): void
+    +envoyerOeuvresRubrique(): void
+  }
+
+  class Rubrique {
+    -nom: string
+    -droitsAcces: string
+  }
+
+  class Oeuvre {
+    -titre: string
+    -auteur: string
+  }
+
+  class Paiement {
+    -montant: float
+    +verifierEtTraiterPaiement(paiement: Paiement): boolean
+
+  }
+
+  class OeuvreEmpruntee {
+    -oeuvre: Oeuvre
+    -cleChiffrement: string
+    +mettreAJourInformations()
+
+  }
+
+  Utilisateur --|> ApplicationEmprunt
+  Membre --|> ApplicationEmprunt
+  ApplicationEmprunt --|> Oeuvre
+  ApplicationEmprunt --|> Paiement
+  ApplicationEmprunt --|> OeuvreEmpruntee
+
+  Utilisateur --|> ApplicationConsultation
+  ApplicationConsultation --|> Serveur
+  ApplicationConsultation --|> Rubrique
+  ApplicationConsultation --|> Oeuvre
+
+  Bibliothecaire --|> ApplicationGestion
+  ApplicationGestion --|> Utilisateur
+  ApplicationGestion --|> Oeuvre
