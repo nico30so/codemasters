@@ -1,0 +1,37 @@
+classDiagram
+  class Utilisateur {
+    +ouvrirApplication(): void
+    +visualiserRubriques(): void
+    +selectionnerRubrique(): void
+    +afficherMessageErreur(message: string): void
+  }
+
+  class Application {
+    +demanderRubriques(): void
+    +afficherRubriques(): void
+    +verifierDroitsAcces(): void
+    +demanderOeuvresRubrique(): void
+    +afficherOeuvresRubrique(): void
+    +afficherMessageErreur(message: string): void
+  }
+
+  class Serveur {
+    +envoyerInformationsRubriques(): void
+    +envoyerDroitsAcces(): void
+    +envoyerOeuvresRubrique(): void
+  }
+
+  class Rubrique {
+    -nom: string
+    -droitsAcces: string
+  }
+
+  class Oeuvre {
+    -titre: string
+    -auteur: string
+  }
+
+  Utilisateur --|> Application
+  Application --|> Serveur
+  Application --|> Rubrique
+  Application --|> Oeuvre
