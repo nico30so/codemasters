@@ -1,0 +1,32 @@
+sequenceDiagram
+    participant Bibliothecaire
+    participant Application
+    participant Systeme
+    participant Membres
+
+    Note over Bibliothecaire, Application: Préconditions\n\n- Œuvre sous droits déterminée pour le domaine public\n- Bibliothécaire connecté à l'application
+
+    Bibliothecaire->>Application: Accède à la section "À Modérer"
+    Bibliothecaire->>Application: Sélectionne l'œuvre pour mise à jour
+    Bibliothecaire->>Application: Met à jour le statut à "Domaine Public"
+    Application->>Application: Déplace l'œuvre dans "fond_commun"
+    Application->>Application: Met à jour l'index des œuvres
+    Application->>Application: Notifie la disponibilité aux membres
+    Application-->>Membres: Notification aux membres
+
+    alt Œuvres empruntées
+        Application->>Application: Maintient les emprunts actuels
+        Application-->>Membres: Nouveaux membres peuvent emprunter gratuitement
+    end
+
+    Bibliothecaire->>Application: Ajoute des commentaires ou annotations
+    Application-->>Systeme: Met à jour les informations
+
+    alt Difficultés Techniques
+        Application-->>Application: Génère un message d'erreur\nInforme le support technique
+    else Erreur pendant la mise à jour
+        Application-->>Application: Génère un message d'erreur\nPropose des options de correction
+        alt Erreur critique
+            Application-->>Bibliothecaire: Informe de l'incident\nAnnule l'opération
+        end
+    end
