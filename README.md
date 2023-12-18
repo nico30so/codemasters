@@ -2,6 +2,14 @@
 
 # Readme - Projet "BiblioConnect"
 
+## Table des Matières
+
+- [Introduction](#introduction)
+- [Fonctionnalités](#fonctionnalités)
+- [Glossaire](#glossaire)
+- [Scénarios d'Utilisation](#scénarios-dutilisation)
+- [Développement](#développement)
+
 ## Introduction
 
 Bienvenue dans le projet "BiblioConnect" ! Cette application, développée par CultureDiffusion, vise à créer une bibliothèque numérique décentralisée où les membres peuvent numériser, emprunter et partager des œuvres de manière collaborative.
