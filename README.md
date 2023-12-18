@@ -20,24 +20,7 @@ L'application se distingue par les fonctionnalités suivantes :
 
 5. **Classification et Catégorisation :** Les œuvres sont classées en types (articles, livres, musique, vidéos) et peuvent appartenir à plusieurs catégories à la fois.
 
-## Glossaire [Lien vers un fichier](Codemasters/Glossaire.md)
-
-
-Pour mieux comprendre le projet, voici un glossaire des termes clés utilisés :
-
-- **Bibliothèque numérique :** Une collection d'œuvres sous forme numérique, généralement accessible via un ordinateur ou un appareil électronique.
-
-- **Gestion décentralisée :** La répartition des responsabilités et des opérations sur plusieurs emplacements ou entités au lieu d'un seul centre de contrôle.
-
-- **Œuvres :** Contenu créatif tel que des livres, de la musique, des vidéos, etc.
-
-- **Domaine public :** Œuvres dont les droits d'auteur ont expiré ou ont été volontairement partagées sans restriction.
-
-- **Emprunt :** L'action de prendre temporairement une œuvre en vue de sa lecture ou de son utilisation.
-
-- **Membre :** Une personne ou une entité qui fait partie d'une organisation ou d'un groupe.
-
-Pour consulter le glossaire complet, veuillez vous référer à la section "Mots clés" dans le fichier détaillé du projet.
+## Glossaire [Lien vers le Glossaire](Glossaire.md)
 
 ## Scénarios d'Utilisation
 
