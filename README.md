@@ -44,17 +44,17 @@ Le projet est accompagné de plusieurs scénarios d'utilisation qui décrivent d
 
 ### Liste des Scénarios
 
-1. **Inscription d'un Nouveau Membre**
-2. **Numérisation d'une Œuvre**
-3. **Emprunt d'une Œuvre du Domaine Public**
-4. **Location d'une Œuvre Sous Droits**
-5. **Proposition d'une Nouvelle Œuvre**
-6. **Modération d'une Proposition par un Bibliothécaire**
-7. **Consultation de la Bibliothèque Numérique**
-8. **Classification d'une Œuvre dans une Catégorie**
-9. **Recherche d'une Œuvre par Titre**
-10. **Visualisation des Détails d'une Œuvre**
-11. **Signalement d'une Œuvre Litigieuse par un Membre**
+1. **Ajout d'une œuvre au répertoire "à modérer" : Proposition d'une nouvelle œuvre**
+2. **Validation d'une œuvre par les bibliothécaires**
+3. **Classification d'une œuvre dans plusieurs catégories**
+4. **Rejet d'une œuvre après modération**
+5. **Consulter une œuvre du domaine public**
+6. **Passage d’une œuvre dans le domaine public**
+7. **Mise à jour de l’index des œuvres**
+8. **Consultation des rubriques**
+9. **Louer une œuvre sous droits d’auteur**
+10. **Mise à Jour de l’Index des Œuvres avec la Passation des Œuvres dans le Domaine Public par le Bibliothécaire**
+11. **Signalement d'une œuvre litigieuse par un membre**
 
 Chaque scénario est détaillé dans le dossier "Scénarios" du projet.
 
