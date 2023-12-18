@@ -1,0 +1,50 @@
+classDiagram
+  class Membre {
+    +explorerEmprunts(): void
+    +choisirEtLouer(oeuvre: Oeuvre): void
+    +confirmerLocation(paiement: Paiement): void
+    +accederEtDechiffrer(oeuvreEmpruntee: OeuvreEmpruntee): void
+    +retournerOeuvre(oeuvreEmpruntee: OeuvreEmpruntee): void
+  }
+
+  class Application {
+    +afficherDetailsTransaction(oeuvre: Oeuvre): void
+    +transmettreDetailsTransaction(paiement: Paiement): void
+    +chiffrerEtEnregistrer(oeuvre: Oeuvre, paiement: Paiement): OeuvreEmpruntee
+    +envoyerNotificationRappel(oeuvreEmpruntee: OeuvreEmpruntee): void
+    +supprimerEmprunt(oeuvreEmpruntee: OeuvreEmpruntee): void
+    +afficherMessageErreur(message: string): void
+  }
+
+  class SystemePaiement {
+    +verifierEtTraiterPaiement(paiement: Paiement): boolean
+  }
+
+  class Bibliothequaires {
+    // Les actions spécifiques des bibliothécaires peuvent être ajoutées si nécessaire
+  }
+
+  class Oeuvre {
+    -titre: string
+    -auteur: string
+    // Autres attributs d'une œuvre
+  }
+
+  class Paiement {
+    -montant: float
+    -methode: string
+    // Autres attributs d'une transaction de paiement
+  }
+
+  class OeuvreEmpruntee {
+    -oeuvre: Oeuvre
+    -cleChiffrement: string
+    // Autres attributs d'une œuvre empruntée
+  }
+
+  Membre --|> Application
+  Application --|> SystemePaiement
+  Application --|> Bibliothequaires
+  Application --|> Oeuvre
+  Application --|> Paiement
+  Application --|> OeuvreEmpruntee
